@@ -6,9 +6,9 @@ export default function LandingPage() {
         <div className="min-h-screen bg-slate-50 font-sans">
             <nav className="w-full bg-white border-b border-slate-200">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                        <ShieldCheck className="w-8 h-8 text-indigo-600" />
-                        <span className="font-bold text-2xl text-slate-900">ServiceDesk</span>
+                    <div className="flex items-center gap-3">
+                        <img src="/logo.png" alt="Logo" className="w-8 h-8 object-contain" />
+                        <span className="font-bold text-2xl text-slate-900">Bharath Refrigeration</span>
                     </div>
                 </div>
             </nav>
@@ -66,7 +66,7 @@ export default function LandingPage() {
             </main>
 
             <footer className="bg-slate-900 py-12 text-center">
-                <p className="text-slate-400">&copy; {new Date().getFullYear()} ServiceDesk. All rights reserved.</p>
+                <p className="text-slate-400">&copy; {new Date().getFullYear()} Bharath Refrigeration. All rights reserved.</p>
             </footer>
         </div>
     )
