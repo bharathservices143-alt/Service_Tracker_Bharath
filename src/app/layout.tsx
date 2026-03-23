@@ -5,7 +5,7 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-    title: 'ServiceDesk - Complaint Management',
+    title: 'Bharath Refrigeration - Complaint Management',
     description: 'Manage complaints and service enquiries efficiently',
 };
 
