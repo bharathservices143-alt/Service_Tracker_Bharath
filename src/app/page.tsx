@@ -1,101 +1,73 @@
-import Image from "next/image";
+import Link from 'next/link'
+import { ArrowRight, ShieldCheck, Clock, CheckCircle } from 'lucide-react'
 
-export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+export default function LandingPage() {
+    return (
+        <div className="min-h-screen bg-slate-50 font-sans">
+            <nav className="w-full bg-white border-b border-slate-200">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                        <ShieldCheck className="w-8 h-8 text-indigo-600" />
+                        <span className="font-bold text-2xl text-slate-900">ServiceDesk</span>
+                    </div>
+                </div>
+            </nav>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <main>
+                {/* Hero Section */}
+                <section className="relative overflow-hidden bg-white py-20 sm:py-32">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                        <h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tight mb-8">
+                            Fast & Reliable <br className="hidden sm:block" />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-cyan-500">
+                                Service Management
+                            </span>
+                        </h1>
+                        <p className="mt-4 max-w-2xl mx-auto text-xl text-slate-500 mb-10">
+                            Submit your complaints or service enquiries.
+                        </p>
+                        <div className="flex justify-center gap-4">
+                            <Link href="/enquiry" className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-indigo-600 text-white font-semibold text-lg hover:bg-indigo-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
+                                Start Enquiry <ArrowRight className="w-5 h-5" />
+                            </Link>
+                        </div>
+                    </div>
+                    <div className="absolute inset-x-0 bottom-0 -z-10 h-64 bg-gradient-to-t from-slate-50 pointer-events-none" />
+                </section>
+
+                {/* Features / Photo Gallery Section */}
+                <section className="py-20 bg-slate-50">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="text-center mb-16">
+                            <h2 className="text-3xl font-bold text-slate-900">Trusted by Professionals</h2>
+                            <p className="mt-4 text-slate-600 text-lg">Delivering excellence in every service request</p>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <div className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                                <Clock className="w-12 h-12 text-indigo-500 mb-4" />
+                                <h3 className="text-xl font-bold text-slate-900 mb-2">Rapid Response</h3>
+                                <p className="text-slate-600">Our team attends to your service requests swiftly to minimize downtime.</p>
+                            </div>
+                            <div className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                                <ShieldCheck className="w-12 h-12 text-cyan-500 mb-4" />
+                                <h3 className="text-xl font-bold text-slate-900 mb-2">Quality Assured</h3>
+                                <p className="text-slate-600">Every service delivery is tracked and verified for maximum satisfaction.</p>
+                            </div>
+                            <div className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                                <CheckCircle className="w-12 h-12 text-emerald-500 mb-4" />
+                                <h3 className="text-xl font-bold text-slate-900 mb-2">Transparent Tracking</h3>
+                                <p className="text-slate-600">Know exactly when your service is delivered with real-time updates.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </main>
+
+            <footer className="bg-slate-900 py-12 text-center">
+                <p className="text-slate-400">&copy; {new Date().getFullYear()} ServiceDesk. All rights reserved.</p>
+            </footer>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+    )
 }
