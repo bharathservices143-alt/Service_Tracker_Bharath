@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { NextResponse } from 'next/server';
 import mongoose from 'mongoose';
 import connectDB from '@/lib/db';
@@ -49,7 +50,8 @@ export async function DELETE(req: Request, { params }: { params: { id: string } 
                         if (imageId) {
                             await bucket.delete(new mongoose.Types.ObjectId(imageId));
                         }
-                    } catch (e) {
+                    } catch (e:any) {
+                        console.log(e)
                         // Ignore if already deleted or invalid
                     }
                 }

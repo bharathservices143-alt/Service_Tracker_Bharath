@@ -16,7 +16,10 @@ export function Sidebar() {
             <div className="md:hidden flex items-center justify-between bg-slate-900 p-4 text-white border-b border-slate-800 relative z-50">
                 <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center gap-3 font-bold text-xl text-white">
                     <img src="/logo.png" alt="Logo" className="w-8 h-8 object-contain" />
-                    <span className="truncate">Bharath Refrigeration</span>
+                    <span className="truncate">
+                        <span className="text-[#FFD700]">Bharath</span>{" "}
+                        <span className="text-[#3B82F6]">Refrigeration</span>
+                    </span>
                 </Link>
                 <button onClick={() => setIsOpen(!isOpen)} className="p-2 -mr-2 text-slate-300 hover:text-white transition">
                     {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -34,8 +37,8 @@ export function Sidebar() {
                             <img src="/logo.png" alt="Logo" className="w-full h-full object-contain" />
                         </div>
                         <div className="flex flex-col items-center">
-                            <span className="font-bold text-lg text-white tracking-wide">BHARATH</span>
-                            <span className="text-xs font-bold text-indigo-400 tracking-[0.2em] -mt-1 uppercase">Refrigeration</span>
+                            <span className="font-bold text-lg text-[#cfb000] tracking-wide">BHARATH</span>
+                            <span className="text-xs font-bold text-[#3B82F6] tracking-[0.2em] -mt-1 uppercase">Refrigeration</span>
                         </div>
                     </Link>
                 </div>

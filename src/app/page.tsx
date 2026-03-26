@@ -8,7 +8,10 @@ export default function LandingPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
                     <div className="flex items-center gap-3">
                         <img src="/logo.png" alt="Logo" className="w-8 h-8 object-contain" />
-                        <span className="font-bold text-2xl text-slate-900">Bharath Refrigeration</span>
+                        <span className="font-bold text-2xl">
+                            <span className="text-[#cfb000]">Bharath</span>{" "}
+                            <span className="text-[#1E3A8A]">Refrigeration</span>
+                        </span>
                     </div>
                 </div>
             </nav>
